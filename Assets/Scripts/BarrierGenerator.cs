@@ -14,7 +14,7 @@ public class BarrierGenerator : MonoBehaviour {
 	private List<bool> usedBarriersState;
 
 	private Transform lastCreatedBarrier;
-	private Vector3 minDistanceBetweenBarriers = new Vector3(0, 4,0);
+	private float minDistanceBetweenBarriers =  4;
 
 	private void Awake(){
 		barriers = new List<Transform> ();
@@ -27,10 +27,10 @@ public class BarrierGenerator : MonoBehaviour {
 	public void GetBarrier(){
 		var barrier = GetFirstFreeBarrier ();
 		if (lastCreatedBarrier != null) {
-			print (lastCreatedBarrier.GetComponentsInChildren<Transform> () [1].localScale.y);
-			var point = (lastCreatedBarrier.position + new Vector3(0, lastCreatedBarrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f),0));
-
-			barrier.position = point + minDistanceBetweenBarriers + new Vector3 (0, barrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f), 0);
+			var endLastCreatedBarrierPointY = lastCreatedBarrier.position.y + lastCreatedBarrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f) ;
+			barrier.position = new Vector2(
+				0,
+				endLastCreatedBarrierPointY + minDistanceBetweenBarriers +barrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f) );
 		}else
 			barrier.position = creationPoint.position;
 
