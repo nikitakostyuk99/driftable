@@ -465,7 +465,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 35
+      value: 17
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -478,6 +478,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  frictionFactor: 0.5
 --- !u!50 &1177266580
 Rigidbody2D:
   serializedVersion: 4
@@ -752,8 +753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41121891cecc26c48afa891eb2850245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrierEntity: {fileID: 1264088959843356, guid: c973611f875479642b32b025f4a302fa,
-    type: 2}
+  barrierEntities:
+  - {fileID: 1966738950870228, guid: 61e4451c0e8706943a1ab02967628d6f, type: 2}
+  - {fileID: 1264088959843356, guid: c973611f875479642b32b025f4a302fa, type: 2}
+  - {fileID: 1022108424126192, guid: bb3f93cd38df6354496e0ddcaf72f1ad, type: 2}
   creationPoint: {fileID: 196509728}
   barriersParent: {fileID: 942160861}
 --- !u!1 &1806502116

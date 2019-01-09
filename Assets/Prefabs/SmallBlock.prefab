@@ -9,34 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1264088959843356}
+  m_RootGameObject: {fileID: 1966738950870228}
   m_IsPrefabParent: 1
---- !u!1 &1264088959843356
+--- !u!1 &1966738950870228
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4699395235567998}
-  - component: {fileID: 50743244453321744}
+  - component: {fileID: 4505292612956198}
+  - component: {fileID: 50841582304149830}
   m_Layer: 0
-  m_Name: Block
+  m_Name: SmallBlock
   m_TagString: Barriers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1376178559148602
+--- !u!1 &1973285563011660
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4529730230995158}
-  - component: {fileID: 212817488539798268}
-  - component: {fileID: 61274114088344704}
+  - component: {fileID: 4233762327231802}
+  - component: {fileID: 212192936508745202}
+  - component: {fileID: 61509245185533710}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Barriers
@@ -44,40 +44,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4529730230995158
+--- !u!4 &4233762327231802
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376178559148602}
+  m_GameObject: {fileID: 1973285563011660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 20, z: 1}
+  m_LocalScale: {x: 1, y: 14, z: 1}
   m_Children: []
-  m_Father: {fileID: 4699395235567998}
+  m_Father: {fileID: 4505292612956198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4699395235567998
+--- !u!4 &4505292612956198
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1264088959843356}
+  m_GameObject: {fileID: 1966738950870228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.020564318, y: 0.04323621, z: 0}
+  m_LocalPosition: {x: -11.919778, y: 4.6263833, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4529730230995158}
+  - {fileID: 4233762327231802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50743244453321744
+--- !u!50 &50841582304149830
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1264088959843356}
+  m_GameObject: {fileID: 1966738950870228}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -91,12 +91,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61274114088344704
+--- !u!61 &61509245185533710
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376178559148602}
+  m_GameObject: {fileID: 1973285563011660}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -116,12 +116,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
---- !u!212 &212817488539798268
+--- !u!212 &212192936508745202
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1376178559148602}
+  m_GameObject: {fileID: 1973285563011660}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2d86404ea16ed1343b634927ee096260, type: 3}
-  m_Color: {r: 0.7058823, g: 1, b: 0.7079107, a: 1}
+  m_Color: {r: 0.7947665, g: 0.9188571, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BarrierGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PhysicsPlayer.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraController.cs" Line="11" Column="22" />
+      <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PhysicsPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PhysicsPlayer.cs" Line="40" Column="52" />
       <File FileName="Assets\Scripts\ScreenEdge.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BarrierGenerator.cs" Line="19" Column="18" />
+      <File FileName="Assets\Scripts\BarrierGenerator.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

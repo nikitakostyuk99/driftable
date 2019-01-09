@@ -5,7 +5,7 @@ using UnityEngine;
 public class BarrierGenerator : MonoBehaviour {
 
 	[Header("Prefabs")]
-	public GameObject barrierEntity;
+	public GameObject[] barrierEntities;
 
 	public Transform creationPoint;
 	public Transform barriersParent;
@@ -14,7 +14,7 @@ public class BarrierGenerator : MonoBehaviour {
 	private List<bool> usedBarriersState;
 
 	private Transform lastCreatedBarrier;
-	private Vector3 minDistanceBetweenBarriers = new Vector3(0, 10,0);
+	private Vector3 minDistanceBetweenBarriers = new Vector3(0, 4,0);
 
 	private void Awake(){
 		barriers = new List<Transform> ();
@@ -26,9 +26,12 @@ public class BarrierGenerator : MonoBehaviour {
 	//make free barrier visible to player
 	public void GetBarrier(){
 		var barrier = GetFirstFreeBarrier ();
-		if (lastCreatedBarrier != null)
-			barrier.position = lastCreatedBarrier.position + minDistanceBetweenBarriers;
-		else
+		if (lastCreatedBarrier != null) {
+			print (lastCreatedBarrier.GetComponentsInChildren<Transform> () [1].localScale.y);
+			var point = (lastCreatedBarrier.position + new Vector3(0, lastCreatedBarrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f),0));
+
+			barrier.position = point + minDistanceBetweenBarriers + new Vector3 (0, barrier.GetComponentsInChildren<Transform> () [1].localScale.y / (40.0f/6.0f), 0);
+		}else
 			barrier.position = creationPoint.position;
 
 		barrier.gameObject.SetActive (true);
@@ -46,7 +49,7 @@ public class BarrierGenerator : MonoBehaviour {
 	private void GenerateBarriers(int count){
 		for (var i = 0; i < count; i++) {
 			var barrier = Instantiate (
-				barrierEntity, 
+				ChooseBarrier(), 
 				creationPoint.position, 
 				Quaternion.identity,
 				barriersParent);
@@ -55,6 +58,11 @@ public class BarrierGenerator : MonoBehaviour {
 			usedBarriersState.Add (false);
 		}
 	}
+
+	private GameObject ChooseBarrier(){
+		return barrierEntities[Random.Range (0, 3)];
+	}
+
 	//if fre barrier is exist then return the first free barrier else expand barriers list by generating some new barriers 	
 	private Transform GetFirstFreeBarrier(){
 		for (var i = 0; i < usedBarriersState.Count; i++) {

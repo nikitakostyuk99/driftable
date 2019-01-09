@@ -13,6 +13,6 @@ public class ScreenEdge : MonoBehaviour {
 		if (OnContatctWithScreenEdge == null) {
 			OnContatctWithScreenEdge = new ContactWithScreenEdge ();
 		}
-		OnContatctWithScreenEdge.Invoke (collider.transform);
+		OnContatctWithScreenEdge.Invoke (collider.transform.parent);
 	}
 }
